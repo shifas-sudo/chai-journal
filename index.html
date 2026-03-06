@@ -1,10 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Chai Journal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chai Journal ☕</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+background:#F5F0E8;
+margin:0;
+padding:0;
+}
+
+.container{
+max-width:500px;
+margin:auto;
+padding:20px;
+}
+
+header{
+background:#C1522A;
+color:white;
+padding:20px;
+border-radius:0 0 20px 20px;
+text-align:center;
+}
+
+.card{
+background:white;
+padding:15px;
+margin-top:15px;
+border-radius:15px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+button{
+background:#C1522A;
+color:white;
+border:none;
+padding:10px 16px;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+}
+
+input{
+padding:8px;
+border-radius:8px;
+border:1px solid #ddd;
+}
+
+</style>
 </head>
+
 <body>
-<h1>Chai Journal ☕</h1>
-<p>Your app is working!</p>
+
+<header>
+<h1>☕ Chai Journal</h1>
+<p>Snack Sales Tracker</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h3>Add Sale</h3>
+<input id="item" placeholder="Item name">
+<input id="price" type="number" placeholder="Price">
+<button onclick="addSale()">Add</button>
+</div>
+
+<div class="card">
+<h3>Sales</h3>
+<ul id="salesList"></ul>
+</div>
+
+</div>
+
+<script>
+
+let sales=[]
+
+function addSale(){
+
+let item=document.getElementById("item").value
+let price=parseFloat(document.getElementById("price").value)
+
+if(!item||!price)return
+
+sales.push({item,price})
+
+render()
+
+}
+
+function render(){
+
+let list=document.getElementById("salesList")
+list.innerHTML=""
+
+let total=0
+
+sales.forEach(s=>{
+total+=s.price
+
+let li=document.createElement("li")
+li.innerText=s.item+" - AED "+s.price
+list.appendChild(li)
+})
+
+let totalItem=document.createElement("li")
+totalItem.innerHTML="<b>Total: AED "+total+"</b>"
+
+list.appendChild(totalItem)
+
+}
+
+</script>
+
 </body>
 </html>

@@ -1,0 +1,629 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; min-height: 15.0px}
+    span.s1 {font: 13.0px 'Zapf Dingbats'}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"/&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/&gt;</p>
+<p class="p1">&lt;meta name="apple-mobile-web-app-capable" content="yes"/&gt;</p>
+<p class="p1">&lt;meta name="apple-mobile-web-app-status-bar-style" content="default"/&gt;</p>
+<p class="p1">&lt;meta name="apple-mobile-web-app-title" content="Chai Journal"/&gt;</p>
+<p class="p1">&lt;meta name="theme-color" content="#C1522A"/&gt;</p>
+<p class="p1">&lt;title&gt;Chai Journal ☕&lt;/title&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1">*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0;}</p>
+<p class="p1">body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F5F0E8;min-height:100vh;overscroll-behavior:none;}</p>
+<p class="p1">input,textarea,button,select{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;}</p>
+<p class="p1">::-webkit-scrollbar{display:none;}</p>
+<p class="p1">.app{max-width:430px;margin:0 auto;min-height:100vh;}</p>
+<p class="p1">.header{background:linear-gradient(135deg,#C1522A,#8B3A1A);padding:28px 20px 20px;border-bottom-left-radius:28px;border-bottom-right-radius:28px;box-shadow:0 4px 24px rgba(150,60,30,0.25);}</p>
+<p class="p1">.hrow{display:flex;justify-content:space-between;align-items:flex-start;}</p>
+<p class="p1">.htitle{font-size:26px;font-weight:900;color:#fff;line-height:1.2;}</p>
+<p class="p1">.hsub{font-size:11px;color:rgba(255,255,255,0.75);font-weight:700;letter-spacing:1.2px;text-transform:uppercase;}</p>
+<p class="p1">.hbtns{display:flex;gap:8px;align-items:center;}</p>
+<p class="p1">.mgbtn{background:rgba(255,255,255,0.2);border:none;border-radius:12px;padding:8px 14px;color:#fff;font-size:12px;font-weight:800;cursor:pointer;}</p>
+<p class="p1">.advbadge{background:rgba(255,255,255,0.25);border-radius:20px;padding:5px 10px;cursor:pointer;display:flex;align-items:center;gap:5px;border:none;color:#fff;font-weight:800;font-size:12px;}</p>
+<p class="p1">.daycards{display:flex;gap:10px;margin-top:16px;}</p>
+<p class="p1">.daycard{flex:1;background:rgba(255,255,255,0.18);border-radius:14px;padding:10px 6px;text-align:center;}</p>
+<p class="p1">.dcval{font-size:11px;font-weight:900;color:#fff;margin-top:1px;}</p>
+<p class="p1">.dclbl{font-size:9px;color:rgba(255,255,255,0.7);font-weight:700;text-transform:uppercase;margin-top:1px;}</p>
+<p class="p1">.setpanel{margin-top:16px;background:rgba(255,255,255,0.15);border-radius:18px;padding:16px;}</p>
+<p class="p1">.setlbl{color:#fff;font-weight:800;font-size:11px;margin-bottom:10px;text-transform:uppercase;letter-spacing:.8px;}</p>
+<p class="p1">.irow{display:flex;align-items:center;gap:8px;margin-bottom:8px;background:rgba(255,255,255,0.12);border-radius:12px;padding:8px 12px;}</p>
+<p class="p1">.iname{color:#fff;font-size:13px;font-weight:700;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}</p>
+<p class="p1">.pinput{width:58px;border-radius:8px;border:none;padding:4px 6px;font-size:14px;font-weight:800;text-align:center;background:rgba(255,255,255,0.9);color:#C1522A;}</p>
+<p class="p1">.delbtn{background:rgba(255,255,255,0.2);border:none;border-radius:8px;padding:4px 9px;color:#fff;font-weight:800;cursor:pointer;font-size:13px;}</p>
+<p class="p1">.adddiv{margin-top:14px;border-top:1px solid rgba(255,255,255,0.2);padding-top:14px;}</p>
+<p class="p1">.colorstrip{display:flex;gap:5px;flex-wrap:wrap;flex:1;padding-top:6px;}</p>
+<p class="p1">.cdot{width:22px;height:22px;border-radius:50%;border:2px solid transparent;cursor:pointer;outline:none;}</p>
+<p class="p1">.emojibtn{background:rgba(255,255,255,0.9);border:none;border-radius:10px;padding:8px 12px;font-size:22px;cursor:pointer;position:relative;}</p>
+<p class="p1">.epicker{position:absolute;z-index:100;display:flex;flex-wrap:wrap;gap:4px;background:#fff;border-radius:14px;padding:10px;box-shadow:0 8px 30px rgba(0,0,0,0.15);width:220px;top:44px;left:0;}</p>
+<p class="p1">.eopt{background:transparent;border:none;border-radius:8px;padding:5px;font-size:20px;cursor:pointer;}</p>
+<p class="p1">.nameinp{width:100%;border-radius:10px;border:none;padding:10px 12px;font-size:14px;font-weight:700;margin-bottom:8px;box-sizing:border-box;outline:none;}</p>
+<p class="p1">.addrow{display:flex;gap:8px;}</p>
+<p class="p1">.aedbox{flex:1;display:flex;align-items:center;background:rgba(255,255,255,0.9);border-radius:10px;padding:0 10px;gap:4px;}</p>
+<p class="p1">.aedlbl{font-size:11px;font-weight:800;color:#C1522A;}</p>
+<p class="p1">.aedinp{flex:1;border:none;outline:none;font-size:14px;font-weight:800;padding:10px 0;background:transparent;}</p>
+<p class="p1">.addok{background:#fff;color:#C1522A;border:none;border-radius:10px;padding:0 18px;font-weight:900;font-size:14px;cursor:pointer;}</p>
+<p class="p1">.datebar{padding:14px 20px 0;}</p>
+<p class="p1">.datewrap{display:flex;align-items:center;gap:10px;background:#fff;border-radius:14px;padding:10px 14px;box-shadow:0 2px 12px rgba(0,0,0,.07);}</p>
+<p class="p1">.dateinp{flex:1;border:none;outline:none;font-size:15px;font-weight:700;color:#333;background:transparent;}</p>
+<p class="p1">.tabs{display:flex;margin:14px 20px 0;background:#fff;border-radius:16px;padding:4px;box-shadow:0 2px 10px rgba(0,0,0,.06);}</p>
+<p class="p1">.tbtn{flex:1;padding:9px 0;border:none;border-radius:13px;font-weight:800;font-size:12px;background:transparent;color:#aaa;transition:all .2s;position:relative;cursor:pointer;}</p>
+<p class="p1">.tbtn.on{background:linear-gradient(135deg,#C1522A,#8B3A1A);color:#fff;box-shadow:0 2px 10px rgba(150,60,30,.25);}</p>
+<p class="p1">.tdot{position:absolute;top:4px;right:6px;background:#C1522A;color:#fff;border-radius:50%;width:16px;height:16px;font-size:9px;font-weight:900;display:flex;align-items:center;justify-content:center;border:2px solid #fff;}</p>
+<p class="p1">.content{padding:14px 20px 110px;}</p>
+<p class="p1">.slbl{font-size:11px;color:#bbb;font-weight:800;margin-bottom:12px;text-transform:uppercase;letter-spacing:.8px;}</p>
+<p class="p1">.card{background:#fff;border-radius:20px;padding:14px 16px;margin-bottom:10px;box-shadow:0 2px 14px rgba(0,0,0,.06);}</p>
+<p class="p1">.sitem{display:flex;justify-content:space-between;align-items:center;}</p>
+<p class="p1">.iico{width:42px;height:42px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}</p>
+<p class="p1">.iinf{font-weight:800;font-size:15px;color:#222;}</p>
+<p class="p1">.isub{font-size:11px;color:#bbb;font-weight:600;}</p>
+<p class="p1">.qcs{display:flex;align-items:center;gap:7px;}</p>
+<p class="p1">.qbtn{width:32px;height:32px;border-radius:10px;border:none;font-size:18px;font-weight:700;cursor:pointer;}</p>
+<p class="p1">.qinp{width:44px;text-align:center;border-radius:10px;font-size:17px;font-weight:900;padding:3px 0;}</p>
+<p class="p1">.revbar{border-radius:20px;padding:16px 20px;margin-top:4px;color:#fff;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(135deg,#C1522A,#8B3A1A);}</p>
+<p class="p1">.empty{text-align:center;padding:40px 20px;color:#ccc;}</p>
+<p class="p1">.eico{font-size:44px;margin-bottom:10px;}</p>
+<p class="p1">.etit{font-weight:800;font-size:16px;color:#bbb;}</p>
+<p class="p1">.esub{font-size:13px;margin-top:4px;}</p>
+<p class="p1">.subnav{display:flex;gap:8px;margin-bottom:14px;}</p>
+<p class="p1">.fscroll{display:flex;gap:6px;margin-bottom:14px;overflow-x:auto;padding-bottom:4px;}</p>
+<p class="p1">.pill{padding:6px 14px;border-radius:20px;border:none;font-weight:700;font-size:12px;background:#E8DCC8;color:#8B6B4A;white-space:nowrap;flex-shrink:0;cursor:pointer;}</p>
+<p class="p1">.pill.on{background:#C1522A;color:#fff;}</p>
+<p class="p1">.pill.grn.on{background:#5C6B3A;color:#fff;}</p>
+<p class="p1">.ocard{background:#fff;border-radius:20px;margin-bottom:10px;box-shadow:0 2px 14px rgba(0,0,0,.06);overflow:hidden;}</p>
+<p class="p1">.ocard.adv{border:2px solid #C8902A;}</p>
+<p class="p1">.ohdr{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;}</p>
+<p class="p1">.oavt{width:42px;height:42px;border-radius:14px;background:#F0EAE0;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:#8B3A1A;flex-shrink:0;}</p>
+<p class="p1">.ometa{flex:1;min-width:0;}</p>
+<p class="p1">.onrow{display:flex;align-items:center;gap:6px;}</p>
+<p class="p1">.oname{font-weight:800;font-size:15px;color:#222;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}</p>
+<p class="p1">.advtag{background:#F7F0E4;color:#C8902A;font-size:10px;font-weight:800;padding:2px 7px;border-radius:8px;flex-shrink:0;}</p>
+<p class="p1">.odrow{display:flex;gap:8px;align-items:center;margin-top:2px;}</p>
+<p class="p1">.odate{font-size:11px;color:#aaa;font-weight:600;}</p>
+<p class="p1">.sbadge{font-size:11px;font-weight:800;padding:2px 8px;border-radius:8px;}</p>
+<p class="p1">.otot{text-align:right;flex-shrink:0;}</p>
+<p class="p1">.ototv{font-weight:900;font-size:14px;color:#C1522A;}</p>
+<p class="p1">.ochev{font-size:10px;color:#ccc;margin-top:2px;}</p>
+<p class="p1">.odet{border-top:1px solid #f5f5f5;padding:12px 16px 14px;}</p>
+<p class="p1">.oirow{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #fafafa;}</p>
+<p class="p1">.qtag{font-weight:800;font-size:13px;padding:3px 10px;border-radius:10px;}</p>
+<p class="p1">.onote{font-size:12px;color:#aaa;font-style:italic;margin:8px 0;}</p>
+<p class="p1">.actrow{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}</p>
+<p class="p1">.stbtn{padding:6px 14px;border-radius:20px;border:none;font-weight:700;font-size:11px;cursor:pointer;}</p>
+<p class="p1">.delbtn2{padding:6px 14px;border-radius:20px;border:none;font-weight:700;font-size:11px;background:#fff0f0;color:#C1522A;margin-left:auto;cursor:pointer;}</p>
+<p class="p1">.prepcard{background:#fff;border-radius:20px;padding:16px 20px;margin-bottom:10px;box-shadow:0 2px 14px rgba(0,0,0,.06);display:flex;align-items:center;gap:14px;}</p>
+<p class="p1">.prepico{width:50px;height:50px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;}</p>
+<p class="p1">.prepn{font-weight:800;font-size:16px;color:#222;}</p>
+<p class="p1">.preps{font-size:12px;color:#bbb;font-weight:600;}</p>
+<p class="p1">.prepct{border-radius:16px;padding:10px 18px;text-align:center;flex-shrink:0;}</p>
+<p class="p1">.prepnum{font-size:28px;font-weight:900;line-height:1;color:#fff;}</p>
+<p class="p1">.prepunit{font-size:10px;font-weight:700;opacity:.85;text-transform:uppercase;color:#fff;}</p>
+<p class="p1">.cust-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #fafafa;}</p>
+<p class="p1">.cavt{width:32px;height:32px;border-radius:10px;background:#F0EAE0;display:flex;align-items:center;justify-content:center;font-weight:900;color:#8B3A1A;font-size:14px;}</p>
+<p class="p1">.noitem{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #fafafa;}</p>
+<p class="p1">.advnotice{background:#F7F0E4;border:1px solid #E8C88A;border-radius:10px;padding:8px 12px;display:flex;gap:8px;align-items:center;font-size:12px;font-weight:700;color:#C8902A;margin-top:8px;}</p>
+<p class="p1">.nobtns{display:flex;gap:10px;}</p>
+<p class="p1">.cancelbtn{flex:1;padding:14px;border:2px solid #E8DCC8;border-radius:16px;background:#fff;font-weight:800;font-size:14px;cursor:pointer;color:#aaa;}</p>
+<p class="p1">.savebtn{flex:2;padding:14px;border:none;border-radius:16px;background:linear-gradient(135deg,#5C6B3A,#3D4F28);color:#fff;font-weight:900;font-size:15px;cursor:pointer;}</p>
+<p class="p1">.sinp{width:100%;border:2px solid #f0f0f0;border-radius:12px;padding:10px 14px;font-size:14px;font-weight:600;box-sizing:border-box;outline:none;margin-bottom:10px;}</p>
+<p class="p1">.stxt{width:100%;border:2px solid #f0f0f0;border-radius:12px;padding:10px 14px;font-size:14px;font-weight:600;box-sizing:border-box;outline:none;resize:none;height:72px;line-height:1.5;}</p>
+<p class="p1">.exprow{display:flex;gap:10px;margin-top:0;}</p>
+<p class="p1">.expaed{flex:1;display:flex;align-items:center;border:2px solid #f0f0f0;border-radius:12px;padding:0 12px;gap:6px;}</p>
+<p class="p1">.expaedl{font-weight:800;color:#C1522A;font-size:11px;}</p>
+<p class="p1">.expaedinp{flex:1;border:none;outline:none;font-size:15px;font-weight:700;padding:10px 0;}</p>
+<p class="p1">.addexpbtn{background:linear-gradient(135deg,#C1522A,#8B3A1A);color:#fff;border:none;border-radius:12px;padding:0 18px;font-weight:800;font-size:14px;cursor:pointer;}</p>
+<p class="p1">.expitem{display:flex;justify-content:space-between;align-items:center;border-left:4px solid #C8902A;}</p>
+<p class="p1">.expn{font-weight:700;font-size:15px;color:#222;}</p>
+<p class="p1">.expa{font-weight:800;font-size:15px;color:#C1522A;margin-top:2px;}</p>
+<p class="p1">.expd{background:#fff0f0;border:none;border-radius:10px;padding:6px 12px;color:#C1522A;font-weight:800;cursor:pointer;font-size:13px;}</p>
+<p class="p1">.exptot{background:#F7F0E4;border-radius:16px;padding:14px 16px;display:flex;justify-content:space-between;}</p>
+<p class="p1">.rtabs{display:flex;background:#fff;border-radius:14px;padding:4px;margin-bottom:14px;box-shadow:0 2px 10px rgba(0,0,0,.06);}</p>
+<p class="p1">.rtab{flex:1;padding:10px 0;border:none;border-radius:11px;font-weight:800;font-size:14px;background:transparent;color:#aaa;cursor:pointer;}</p>
+<p class="p1">.rtab.on{background:linear-gradient(135deg,#C1522A,#8B3A1A);color:#fff;}</p>
+<p class="p1">.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;}</p>
+<p class="p1">.scard{background:#fff;border-radius:18px;padding:16px 14px;box-shadow:0 2px 12px rgba(0,0,0,.06);}</p>
+<p class="p1">.scico{font-size:22px;}</p>
+<p class="p1">.scval{font-size:16px;font-weight:900;margin-top:4px;}</p>
+<p class="p1">.sclbl{font-size:10px;color:#bbb;font-weight:800;text-transform:uppercase;margin-top:2px;}</p>
+<p class="p1">.bitem{margin-bottom:14px;}</p>
+<p class="p1">.brow{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}</p>
+<p class="p1">.ptrack{height:7px;background:#f5f5f5;border-radius:10px;overflow:hidden;}</p>
+<p class="p1">.pbar{height:100%;border-radius:10px;transition:width .6s ease;}</p>
+<p class="p1">.toast{position:fixed;bottom:88px;left:50%;transform:translateX(-50%);border-radius:14px;padding:11px 22px;font-weight:800;font-size:14px;z-index:300;box-shadow:0 4px 20px rgba(0,0,0,.2);white-space:nowrap;color:#fff;pointer-events:none;}</p>
+<p class="p1">.hidden{display:none!important;}</p>
+<p class="p1">.ctitle{font-size:14px;font-weight:800;color:#333;margin-bottom:14px;}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1">&lt;div class="app"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hrow"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;&lt;div class="hsub"&gt;🇦🇪 Snack Tracker&lt;/div&gt;&lt;div class="htitle"&gt;Chai Journal ☕&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="hbtns"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="advbadge hidden" id="advBadge" onclick="goAdv()"&gt;⏰ &lt;span id="advCnt"&gt;0&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="mgbtn" id="mgBtn" onclick="toggleSet()"&gt;⚙️ Manage&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="setpanel hidden" id="setPanel"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="setlbl"&gt;Items &amp;amp; Prices (AED)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="itemsList"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="adddiv"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="setlbl"&gt;➕ Add New Item&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="display:flex;gap:10px;margin-bottom:10px;align-items:flex-start;position:relative;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div style="position:relative;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="emojibtn" onclick="toggleEP()"&gt;&lt;span id="selEmoji"&gt;🍡&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="epicker hidden" id="ePicker"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="colorstrip" id="colorStrip"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input class="nameinp" id="newName" placeholder="Item name"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="addrow"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="aedbox"&gt;&lt;span class="aedlbl"&gt;AED&lt;/span&gt;&lt;input class="aedinp" id="newPrice" type="number" placeholder="Price"/&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button class="addok" onclick="addItem()"&gt;Add&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="daycards"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="daycard"&gt;&lt;div style="font-size:16px"&gt;💰&lt;/div&gt;&lt;div class="dcval" id="hRev"&gt;AED 0.00&lt;/div&gt;&lt;div class="dclbl"&gt;Revenue&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="daycard"&gt;&lt;div style="font-size:16px"&gt;📦&lt;/div&gt;&lt;div class="dcval" id="hExp"&gt;AED 0.00&lt;/div&gt;&lt;div class="dclbl"&gt;Expenses&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="daycard"&gt;&lt;div style="font-size:16px"&gt;📈&lt;/div&gt;&lt;div class="dcval" id="hProfit"&gt;AED 0.00&lt;/div&gt;&lt;div class="dclbl"&gt;Profit&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="datebar" id="dateBar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="datewrap"&gt;&lt;span style="font-size:18px"&gt;📅&lt;/span&gt;&lt;input class="dateinp" type="date" id="selDate" onchange="onDateChange()"/&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="tabs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="tbtn on" id="tb-Sales" onclick="switchTab('Sales')"&gt;Sales&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="tbtn" id="tb-Orders" onclick="switchTab('Orders')"&gt;Orders&lt;span class="tdot hidden" id="oDot"&gt;&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="tbtn" id="tb-Expenses" onclick="switchTab('Expenses')"&gt;Expenses&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="tbtn" id="tb-Report" onclick="switchTab('Report')"&gt;Report&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="v-Sales"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="v-Orders" class="hidden"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="v-Expenses" class="hidden"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="v-Report" class="hidden"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;div class="toast hidden" id="toast"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">// ── CONSTANTS ──</p>
+<p class="p1">const PAL=[</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{bg:"#C1522A",light:"#F7EDE8"},{bg:"#5C6B3A",light:"#EDF0E8"},</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{bg:"#C8902A",light:"#F7F0E4"},{bg:"#B06030",light:"#F5EDE6"},</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{bg:"#2C5A6A",light:"#E4EDF0"},{bg:"#8B6914",light:"#F2EBD9"},</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{bg:"#7A3B28",light:"#F0E8E4"},{bg:"#3D6B5A",light:"#E6EFF0"}</p>
+<p class="p1">];</p>
+<p class="p1">const EMOJIS=["🥟","🥐","🍌","🍕","🌮","🥪","🍔","🧆","🍩","🧁","🥧","🍱","🥗","🥘","🫔","🌯","🥙","🫕","🍢","🥜"];</p>
+<p class="p1">const ST={</p>
+<p class="p1"><span class="Apple-converted-space">  </span>pending:{label:"Pending",color:"#C8902A",bg:"#F7F0E4",icon:"⏳"},</p>
+<p class="p1"><span class="Apple-converted-space">  </span>ready:{label:"Ready",color:"#2C5A6A",bg:"#E4EDF0",icon:"✅"},</p>
+<p class="p1"><span class="Apple-converted-space">  </span>delivered:{label:"Delivered",color:"#5C6B3A",bg:"#EDF0E8",icon:"🎉"}</p>
+<p class="p1">};</p>
+<p class="p2"><br></p>
+<p class="p1">// ── HISTORICAL DATA ──</p>
+<p class="p1">const HITEMS={"Cutlet":{"bg":"#C1522A","light":"#F7EDE8","emoji":"🍗","price":2.5},"Samosa":{"bg":"#5C6B3A","light":"#EDF0E8","emoji":"🥟","price":2.5},"Scotch Eggs":{"bg":"#C8902A","light":"#F7F0E4","emoji":"🥚","price":2.0},"Unnakaya":{"bg":"#5C6B3A","light":"#EDF0E8","emoji":"🍌","price":2.5},"Egg Pakoda":{"bg":"#B06030","light":"#F5EDE6","emoji":"🍳","price":2.5},"Beef Cutlet":{"bg":"#2C5A6A","light":"#E4EDF0","emoji":"🥩","price":3.0},"Egg Puffs":{"bg":"#C1522A","light":"#F7EDE8","emoji":"🥐","price":3.0},"Spring Rolls":{"bg":"#C8902A","light":"#F7F0E4","emoji":"🌯","price":2.5},"Creamy Spring Rolls":{"bg":"#B06030","light":"#F5EDE6","emoji":"🌯","price":2.0},"Beef Cutlets":{"bg":"#2C5A6A","light":"#E4EDF0","emoji":"🥩","price":3.0}};</p>
+<p class="p1">const HDATA={"2026-02-18":{"sales":{"Cutlet":4,"Samosa":4},"expenses":[{"id":1700000001000,"label":"Pantry (from hubby)","amount":255.0},{"id":1700000001001,"label":"Pantry (From Profit)","amount":31.0},{"id":1700000001002,"label":"Pantry (From Profit)","amount":50.0},{"id":1700000001003,"label":"Pantry (From hubby)","amount":18.0},{"id":1700000001004,"label":"Pantry (From me)","amount":30.0},{"id":1700000001005,"label":"Pantry (From profit)","amount":25.0},{"id":1700000001010,"label":"Pantry (From profit)","amount":50.0},{"id":1700000001011,"label":"Pantry (From profit)","amount":40.0},{"id":1700000001012,"label":"Packing (From profit)","amount":20.0}]},"2026-02-19":{"sales":{"Cutlet":4,"Samosa":8},"expenses":[]},"2026-02-20":{"sales":{"Samosa":4,"Scotch Eggs":4},"expenses":[]},"2026-02-21":{"sales":{"Samosa":8,"Unnakaya":4,"Egg Pakoda":4},"expenses":[]},"2026-02-22":{"sales":{"Samosa":6},"expenses":[]},"2026-02-23":{"sales":{"Unnakaya":4,"Samosa":4},"expenses":[]},"2026-02-24":{"sales":{"Samosa":20,"Beef Cutlet":5,"Unnakaya":4},"expenses":[]},"2026-02-25":{"sales":{"Egg Puffs":12,"Spring Rolls":4},"expenses":[]},"2026-02-26":{"sales":{"Samosa":14,"Creamy Spring Rolls":10,"Beef Cutlet":7},"expenses":[]},"2026-02-27":{"sales":{"Egg Puffs":15,"Beef Cutlets":4,"Beef Cutlet":7},"expenses":[]},"2026-02-28":{"sales":{"Samosa":20,"Unnakaya":20,"Cutlet":6},"expenses":[]},"2026-03-02":{"sales":{"Samosa":3,"Egg Puffs":8},"expenses":[]},"2026-03-04":{"sales":{"Egg Puffs":10,"Unnakaya":24},"expenses":[]}};</p>
+<p class="p1">const HORDERS=[{"id":1700000000000,"customerName":"Zamna","date":"2026-02-18","items":{"Cutlet":4,"Samosa":4},"prices":{"Cutlet":2.5,"Samosa":2.5},"note":"Imported","status":"delivered"},{"id":1700000001000,"customerName":"Ayesha","date":"2026-02-19","items":{"Cutlet":4,"Samosa":4},"prices":{"Cutlet":2.5,"Samosa":2.5},"note":"Imported","status":"delivered"},{"id":1700000002000,"customerName":"Fareeda","date":"2026-02-19","items":{"Samosa":4},"prices":{"Samosa":2.5},"note":"Imported","status":"delivered"},{"id":1700000003000,"customerName":"Ayesha","date":"2026-02-20","items":{"Samosa":4,"Scotch Eggs":4},"prices":{"Samosa":2.5,"Scotch Eggs":2.0},"note":"Imported","status":"delivered"},{"id":1700000004000,"customerName":"Raheema","date":"2026-02-21","items":{"Samosa":4,"Unnakaya":4,"Egg Pakoda":4},"prices":{"Samosa":2.5,"Unnakaya":2.5,"Egg Pakoda":2.5},"note":"Imported","status":"delivered"},{"id":1700000005000,"customerName":"Zoain","date":"2026-02-21","items":{"Samosa":4},"prices":{"Samosa":2.5},"note":"Imported","status":"delivered"},{"id":1700000006000,"customerName":"Saba","date":"2026-02-22","items":{"Samosa":6},"prices":{"Samosa":2.5},"note":"Imported","status":"delivered"},{"id":1700000007000,"customerName":"Sreekutti","date":"2026-02-23","items":{"Unnakaya":4,"Samosa":4},"prices":{"Unnakaya":2.0,"Samosa":2.5},"note":"Imported","status":"delivered"},{"id":1700000008000,"customerName":"Ayesha","date":"2026-02-24","items":{"Samosa":20,"Beef Cutlet":5},"prices":{"Samosa":2.5,"Beef Cutlet":3.0},"note":"Imported","status":"delivered"},{"id":1700000009000,"customerName":"Zamna","date":"2026-02-24","items":{"Unnakaya":4},"prices":{"Unnakaya":2.5},"note":"Imported","status":"delivered"},{"id":1700000010000,"customerName":"Nithya","date":"2026-02-25","items":{"Egg Puffs":7,"Spring Rolls":4},"prices":{"Egg Puffs":3.0,"Spring Rolls":2.5},"note":"Imported","status":"delivered"},{"id":1700000011000,"customerName":"Sharika","date":"2026-02-25","items":{"Egg Puffs":5},"prices":{"Egg Puffs":3.0},"note":"Imported","status":"delivered"},{"id":1700000012000,"customerName":"Aswathy","date":"2026-02-26","items":{"Samosa":3},"prices":{"Samosa":2.5},"note":"Imported","status":"delivered"},{"id":1700000013000,"customerName":"Ayesha","date":"2026-02-26","items":{"Creamy Spring Rolls":10},"prices":{"Creamy Spring Rolls":2.0},"note":"Imported","status":"delivered"},{"id":1700000014000,"customerName":"Firoja","date":"2026-02-26","items":{"Beef Cutlet":4,"Samosa":5},"prices":{"Beef Cutlet":3.0,"Samosa":2.5},"note":"Imported","status":"delivered"},{"id":1700000015000,"customerName":"Shivina","date":"2026-02-26","items":{"Samosa":6,"Beef Cutlet":3},"prices":{"Samosa":2.5,"Beef Cutlet":3.0},"note":"Imported","status":"delivered"},{"id":1700000016000,"customerName":"Cimi","date":"2026-02-27","items":{"Egg Puffs":2,"Beef Cutlets":4},"prices":{"Egg Puffs":3.0,"Beef Cutlets":3.0},"note":"Imported","status":"delivered"},{"id":1700000017000,"customerName":"Megha","date":"2026-02-27","items":{"Egg Puffs":2,"Beef Cutlet":1},"prices":{"Egg Puffs":3.0,"Beef Cutlet":3.0},"note":"Imported","status":"delivered"},{"id":1700000018000,"customerName":"Rejitha","date":"2026-02-27","items":{"Beef Cutlet":6},"prices":{"Beef Cutlet":3.0},"note":"Imported","status":"delivered"},{"id":1700000019000,"customerName":"Ria","date":"2026-02-27","items":{"Egg Puffs":6},"prices":{"Egg Puffs":3.0},"note":"Imported","status":"delivered"},{"id":1700000020000,"customerName":"Shivina","date":"2026-02-27","items":{"Egg Puffs":5},"prices":{"Egg Puffs":3.0},"note":"Imported","status":"delivered"},{"id":1700000021000,"customerName":"Ayesha","date":"2026-02-28","items":{"Samosa":10},"prices":{"Samosa":2.5},"note":"Imported","status":"delivered"},{"id":1700000022000,"customerName":"Rachel","date":"2026-02-28","items":{"Unnakaya":20},"prices":{"Unnakaya":2.5},"note":"Imported","status":"delivered"},{"id":1700000023000,"customerName":"Sreekutty","date":"2026-02-28","items":{"Samosa":10,"Cutlet":6},"prices":{"Samosa":2.5,"Cutlet":3.0},"note":"Imported","status":"delivered"},{"id":1700000024000,"customerName":"Kanika","date":"2026-03-02","items":{"Samosa":3,"Egg Puffs":3},"prices":{"Samosa":2.5,"Egg Puffs":3.0},"note":"Imported","status":"delivered"},{"id":1700000025000,"customerName":"Nithya","date":"2026-03-02","items":{"Egg Puffs":5},"prices":{"Egg Puffs":3.0},"note":"Imported","status":"delivered"},{"id":1700000026000,"customerName":"Deepa","date":"2026-03-04","items":{"Egg Puffs":1,"Unnakaya":1},"prices":{"Egg Puffs":3.0,"Unnakaya":3.0},"note":"Imported","status":"delivered"},{"id":1700000027000,"customerName":"Lalitha","date":"2026-03-04","items":{"Unnakaya":2,"Egg Puffs":2},"prices":{"Unnakaya":3.0,"Egg Puffs":3.0},"note":"Imported","status":"delivered"},{"id":1700000028000,"customerName":"Malavika","date":"2026-03-04","items":{"Unnakaya":10},"prices":{"Unnakaya":3.0},"note":"Imported","status":"delivered"},{"id":1700000029000,"customerName":"Praveena","date":"2026-03-04","items":{"Unnakaya":4},"prices":{"Unnakaya":3.0},"note":"Imported","status":"delivered"},{"id":1700000030000,"customerName":"Raheema","date":"2026-03-04","items":{"Unnakaya":4},"prices":{"Unnakaya":2.5},"note":"Imported","status":"delivered"},{"id":1700000031000,"customerName":"Shivina","date":"2026-03-04","items":{"Egg Puffs":5},"prices":{"Egg Puffs":3.0},"note":"Imported","status":"delivered"},{"id":1700000032000,"customerName":"Zamna","date":"2026-03-04","items":{"Unnakaya":3,"Egg Puffs":2},"prices":{"Unnakaya":2.5,"Egg Puffs":3.0},"note":"Imported","status":"delivered"}];</p>
+<p class="p2"><br></p>
+<p class="p1">// ── STATE ──</p>
+<p class="p1">function seed(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(localStorage.getItem("cj_seeded_v2"))return;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const ei=JSON.parse(localStorage.getItem("cj_items")||"null");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>localStorage.setItem("cj_items",JSON.stringify(ei?Object.assign({},HITEMS,ei):HITEMS));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const ed=JSON.parse(localStorage.getItem("cj_data")||"{}");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>localStorage.setItem("cj_data",JSON.stringify(Object.assign({},HDATA,ed)));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const eo=JSON.parse(localStorage.getItem("cj_orders")||"[]");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const ids=new Set(eo.map(o=&gt;o.id));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>localStorage.setItem("cj_orders",JSON.stringify(eo.concat(HORDERS.filter(o=&gt;!ids.has(o.id)))));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>localStorage.setItem("cj_seeded_v2","1");</p>
+<p class="p1">}</p>
+<p class="p1">seed();</p>
+<p class="p2"><br></p>
+<p class="p1">function gi(){try{return JSON.parse(localStorage.getItem("cj_items")||"null")||HITEMS;}catch{return HITEMS;}}</p>
+<p class="p1">function gd(){try{return JSON.parse(localStorage.getItem("cj_data")||"{}");}catch{return {};}}</p>
+<p class="p1">function go(){try{return JSON.parse(localStorage.getItem("cj_orders")||"[]");}catch{return [];}}</p>
+<p class="p1">function si(v){localStorage.setItem("cj_items",JSON.stringify(v));}</p>
+<p class="p1">function sd(v){localStorage.setItem("cj_data",JSON.stringify(v));}</p>
+<p class="p1">function so(v){localStorage.setItem("cj_orders",JSON.stringify(v));}</p>
+<p class="p1">function gday(date){var d=gd();return d[date]||{sales:{},expenses:[]};}</p>
+<p class="p1">function cur(n){return"AED "+(Number(n)||0).toFixed(2);}</p>
+<p class="p1">function tday(){return new Date().toISOString().split("T")[0];}</p>
+<p class="p1">function fdate(d){return new Date(d+"T00:00:00").toLocaleDateString("en-AE",{day:"numeric",month:"short",year:"numeric"});}</p>
+<p class="p1">function isAdv(d){return d&gt;tday();}</p>
+<p class="p1">function wkey(d){var dt=new Date(d),j=new Date(dt.getFullYear(),0,1);return dt.getFullYear()+"-W"+Math.ceil(((dt-j)/86400000+j.getDay()+1)/7);}</p>
+<p class="p1">function mkey(d){return d.slice(0,7);}</p>
+<p class="p2"><br></p>
+<p class="p1">var curTab="Sales",curOV="list",selDate=tday(),prepDate=tday(),oFilter="all",rtype="week",expandId=null,selCI=0,selEM="🍡",editId=null;</p>
+<p class="p1">var newOrd={cname:"",date:tday(),items:{},note:""};</p>
+<p class="p2"><br></p>
+<p class="p1">// ── TOAST ──</p>
+<p class="p1">function showToast(msg,err){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var t=document.getElementById("toast");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>t.textContent=msg;t.style.background=err?"#C1522A":"#2C2C2C";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>t.classList.remove("hidden");setTimeout(function(){t.classList.add("hidden");},2400);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ── SETTINGS ──</p>
+<p class="p1">function toggleSet(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var p=document.getElementById("setPanel"),b=document.getElementById("mgBtn");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>p.classList.toggle("hidden");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>b.textContent=p.classList.contains("hidden")?"⚙️ Manage":"<span class="s1">✕</span> Close";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(!p.classList.contains("hidden")){renderItemsList();renderColorStrip();renderEPicker();}</p>
+<p class="p1">}</p>
+<p class="p1">function renderColorStrip(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("colorStrip").innerHTML=PAL.map(function(c,i){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return'&lt;button class="cdot'+(selCI===i?' ':"")+(selCI===i?'" style="background:'+c.bg+';border:3px solid #fff"':'" style="background:'+c.bg+'"')+' onclick="pickC('+i+')"&gt;&lt;/button&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}).join("");</p>
+<p class="p1">}</p>
+<p class="p1">function pickC(i){selCI=i;renderColorStrip();}</p>
+<p class="p1">function toggleEP(){document.getElementById("ePicker").classList.toggle("hidden");}</p>
+<p class="p1">function renderEPicker(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("ePicker").innerHTML=EMOJIS.map(function(em){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return'&lt;button class="eopt" style="background:'+(selEM===em?"#C1522A":"transparent")+'" onclick="pickE(\''+em+'\')"&gt;'+em+'&lt;/button&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}).join("");</p>
+<p class="p1">}</p>
+<p class="p1">function pickE(em){selEM=em;document.getElementById("selEmoji").textContent=em;document.getElementById("ePicker").classList.add("hidden");renderEPicker();}</p>
+<p class="p1">function renderItemsList(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var items=gi(),ik=Object.keys(items);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("itemsList").innerHTML=ik.length?ik.map(function(n){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var it=items[n];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return'&lt;div class="irow"&gt;&lt;span style="font-size:18px"&gt;'+it.emoji+'&lt;/span&gt;&lt;span class="iname"&gt;'+n+'&lt;/span&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;input class="pinput" type="number" value="'+it.price+'" onchange="updPrice(\''+n+'\',this.value)"/&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;button class="delbtn" onclick="delItem(\''+n+'\')"&gt;<span class="s1">✕</span>&lt;/button&gt;&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}).join(""):'&lt;div style="color:rgba(255,255,255,0.6);font-size:13px;margin-bottom:8px"&gt;No items yet.&lt;/div&gt;';</p>
+<p class="p1">}</p>
+<p class="p1">function addItem(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var name=document.getElementById("newName").value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var price=parseFloat(document.getElementById("newPrice").value);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(!name)return showToast("Enter item name",true);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var items=gi();if(items[name])return showToast("Already exists",true);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(!price||isNaN(price))return showToast("Enter valid price",true);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var c=PAL[selCI];items[name]={bg:c.bg,light:c.light,emoji:selEM,price:price};</p>
+<p class="p1"><span class="Apple-converted-space">  </span>si(items);document.getElementById("newName").value="";document.getElementById("newPrice").value="";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>showToast(name+" added ✓");renderItemsList();render();</p>
+<p class="p1">}</p>
+<p class="p1">function delItem(n){var items=gi();delete items[n];si(items);renderItemsList();render();}</p>
+<p class="p1">function updPrice(n,p){var items=gi();items[n].price=parseFloat(p)||0;si(items);updateHeader();}</p>
+<p class="p2"><br></p>
+<p class="p1">// ── HEADER ──</p>
+<p class="p1">function updateHeader(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var items=gi(),day=gday(selDate);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var rev=Object.keys(items).reduce(function(s,i){return s+(day.sales[i]||0)*(items[i].price||0);},0);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var exp=(day.expenses||[]).reduce(function(s,e){return s+e.amount;},0);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("hRev").textContent=cur(rev);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("hExp").textContent=cur(exp);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("hProfit").textContent=cur(rev-exp);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var advc=go().filter(function(o){return isAdv(o.date)&amp;&amp;o.status==="pending";}).length;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var ab=document.getElementById("advBadge"),od=document.getElementById("oDot");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(advc&gt;0){ab.classList.remove("hidden");document.getElementById("advCnt").textContent=advc;od.classList.remove("hidden");od.textContent=advc;}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>else{ab.classList.add("hidden");od.classList.add("hidden");}</p>
+<p class="p1">}</p>
+<p class="p1">function goAdv(){switchTab("Orders");oFilter="advance";curOV="list";render();}</p>
+<p class="p1">function onDateChange(){selDate=document.getElementById("selDate").value;render();}</p>
+<p class="p2"><br></p>
+<p class="p1">// ── TABS ──</p>
+<p class="p1">function switchTab(t){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll(".tbtn").forEach(function(b){b.classList.remove("on");});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("tb-"+t).classList.add("on");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll(".content&gt;div").forEach(function(d){d.classList.add("hidden");});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("v-"+t).classList.remove("hidden");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("dateBar").classList.toggle("hidden",t==="Orders");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>curTab=t;render();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function render(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>updateHeader();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(curTab==="Sales")renderSales();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>else if(curTab==="Orders")renderOrders();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>else if(curTab==="Expenses")renderExpenses();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>else if(curTab==="Report")renderReport();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ── SALES ──</p>
+<p class="p1">function renderSales(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var items=gi(),ik=Object.keys(items),day=gday(selDate),el=document.getElementById("v-Sales");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var h='&lt;div class="slbl"&gt;Units Sold — '+fdate(selDate)+'&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(!ik.length){h+='&lt;div class="empty"&gt;&lt;div class="eico"&gt;🛒&lt;/div&gt;&lt;div class="etit"&gt;No items yet&lt;/div&gt;&lt;div class="esub"&gt;Tap ⚙️ Manage to add snacks&lt;/div&gt;&lt;/div&gt;';el.innerHTML=h;return;}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>ik.forEach(function(item){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var it=items[item],q=day.sales[item]||0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h+='&lt;div class="card" style="border-left:4px solid '+it.bg+'"&gt;&lt;div class="sitem"&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;div style="display:flex;align-items:center;gap:10px"&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;div class="iico" style="background:'+it.light+'"&gt;'+it.emoji+'&lt;/div&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;div&gt;&lt;div class="iinf"&gt;'+item+'&lt;/div&gt;&lt;div class="isub"&gt;AED '+Number(it.price).toFixed(2)+' · '+cur(q*it.price)+'&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;div class="qcs"&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;button class="qbtn" style="background:#f5f5f5;color:#666" onclick="chgS(\''+item+'\','+(q-1)+')"&gt;−&lt;/button&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;input class="qinp" type="number" value="'+q+'" min="0" style="border:2px solid '+it.bg+';color:'+it.bg+';background:'+it.light+'" onchange="chgS(\''+item+'\',parseInt(this.value)||0)"/&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;button class="qbtn" style="background:'+it.bg+';color:#fff" onclick="chgS(\''+item+'\','+(q+1)+')"&gt;+&lt;/button&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var rev=ik.reduce(function(s,i){return s+(day.sales[i]||0)*(items[i].price||0);},0);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>h+='&lt;div class="revbar"&gt;&lt;div&gt;&lt;div style="font-size:11px;opacity:.8;font-weight:700;text-transform:uppercase"&gt;Today\'s Revenue&lt;/div&gt;&lt;div style="font-size:26px;font-weight:900"&gt;'+cur(rev)+'&lt;/div&gt;&lt;/div&gt;&lt;div style="font-size:38px"&gt;🧾&lt;/div&gt;&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>el.innerHTML=h;</p>
+<p class="p1">}</p>
+<p class="p1">function chgS(item,qty){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>qty=Math.max(0,parseInt(qty)||0);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var d=gd();if(!d[selDate])d[selDate]={sales:{},expenses:[]};</p>
+<p class="p1"><span class="Apple-converted-space">  </span>d[selDate].sales[item]=qty;sd(d);render();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ── ORDERS ──</p>
+<p class="p1">function renderOrders(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var el=document.getElementById("v-Orders");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var nav='&lt;div class="subnav"&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>'&lt;button class="pill'+(curOV==="list"?" on":"")+'" onclick="setOV(\'list\')"&gt;📋 Orders&lt;/button&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>'&lt;button class="pill'+(curOV==="prep"?" on":"")+'" onclick="setOV(\'prep\')"&gt;🍳 Prep List&lt;/button&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>'&lt;button class="pill grn'+(curOV==="new"?" on":"")+'" onclick="setOV(\'new\')"&gt;➕ New Order&lt;/button&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>'&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var body="";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(curOV==="list")body=renderOList();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>else if(curOV==="prep")body=renderPrep();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>else body=renderNewOrd();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>el.innerHTML=nav+body;</p>
+<p class="p1">}</p>
+<p class="p1">function setOV(v){curOV=v;renderOrders();}</p>
+<p class="p2"><br></p>
+<p class="p1">function oTot(o){return Object.entries(o.items).reduce(function(s,e){return s+e[1]*(o.prices&amp;&amp;o.prices[e[0]]!=null?o.prices[e[0]]:(gi()[e[0]]&amp;&amp;gi()[e[0]].price||0));},0);}</p>
+<p class="p2"><br></p>
+<p class="p1">function renderOList(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var orders=go();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var filters='&lt;div class="fscroll"&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>[["all","All"],["pending","⏳ Pending"],["ready","✅ Ready"],["delivered","🎉 Done"],["advance","⏰ Advance"]].map(function(v){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return'&lt;button class="pill'+(oFilter===v[0]?" on":"")+'" onclick="setOF(\''+v[0]+'\')"&gt;'+v[1]+'&lt;/button&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}).join("")+'&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var filtered=orders.filter(function(o){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(oFilter==="advance")return isAdv(o.date)&amp;&amp;o.status==="pending";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(oFilter==="all")return true;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return o.status===oFilter;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}).sort(function(a,b){return b.date.localeCompare(a.date)||b.id-a.id;});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(!filtered.length)return filters+'&lt;div class="empty"&gt;&lt;div class="eico"&gt;📭&lt;/div&gt;&lt;div class="etit"&gt;No orders here&lt;/div&gt;&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var items=gi();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return filters+filtered.map(function(o){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var st=ST[o.status],adv=isAdv(o.date),isE=expandId===o.id;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var total=oTot(o);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var det="";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(isE){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>var rows=Object.keys(o.items).map(function(it){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var c=items[it]||{emoji:"🍽️",light:"#f5f5f5",bg:"#666"},q=o.items[it];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var price=o.prices&amp;&amp;o.prices[it]!=null?o.prices[it]:(c.price||0);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return'&lt;div class="oirow"&gt;&lt;div style="display:flex;align-items:center;gap:8px"&gt;&lt;span style="font-size:16px"&gt;'+c.emoji+'&lt;/span&gt;&lt;span style="font-weight:700;font-size:14px;color:#222"&gt;'+it+'&lt;/span&gt;&lt;/div&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">          </span>'&lt;div style="display:flex;align-items:center;gap:10px"&gt;&lt;span class="qtag" style="background:'+c.light+';color:'+c.bg+'"&gt;×'+q+'&lt;/span&gt;&lt;span style="font-weight:700;font-size:13px;color:#aaa"&gt;'+cur(q*price)+'&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}).join("");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>var stbtns=Object.keys(ST).map(function(s){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return'&lt;button class="stbtn" style="background:'+(o.status===s?ST[s].color:"#E8DCC8")+';color:'+(o.status===s?"#fff":"#8B6B4A")+'" onclick="updSt('+o.id+',\''+s+'\')"&gt;'+ST[s].icon+' '+ST[s].label+'&lt;/button&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}).join("");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>det='&lt;div class="odet"&gt;'+rows+(o.note?'&lt;div class="onote"&gt;📝 '+o.note+'&lt;/div&gt;':'')+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>'&lt;div class="actrow"&gt;'+stbtns+'&lt;/div&gt;&lt;div class="actrow" style="margin-top:6px"&gt;&lt;button class="stbtn" style="background:#F7F0E4;color:#C8902A" onclick="startEdit('+o.id+')"&gt;✏️ Edit&lt;/button&gt;&lt;button class="delbtn2" onclick="delOrd('+o.id+')"&gt;🗑 Delete&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return'&lt;div class="ocard'+(adv&amp;&amp;o.status==="pending"?" adv":"")+'"&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;div class="ohdr" onclick="togExp('+o.id+')"&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;div class="oavt"&gt;'+o.customerName.charAt(0).toUpperCase()+'&lt;/div&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;div class="ometa"&gt;&lt;div class="onrow"&gt;&lt;span class="oname"&gt;'+o.customerName+'&lt;/span&gt;'+(adv&amp;&amp;o.status==="pending"?'&lt;span class="advtag"&gt;ADVANCE&lt;/span&gt;':'')+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;/div&gt;&lt;div class="odrow"&gt;&lt;span class="odate"&gt;📅 '+fdate(o.date)+'&lt;/span&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;span class="sbadge" style="background:'+st.bg+';color:'+st.color+'"&gt;'+st.icon+' '+st.label+'&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;div class="otot"&gt;&lt;div class="ototv"&gt;'+cur(total)+'&lt;/div&gt;&lt;div class="ochev"&gt;'+(isE?"▲":"▼")+'&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;'+det+'&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}).join("");</p>
+<p class="p1">}</p>
+<p class="p1">function setOF(f){oFilter=f;renderOrders();}</p>
+<p class="p1">function togExp(id){expandId=expandId===id?null:id;renderOrders();}</p>
+<p class="p1">function updSt(id,s){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var orders=go(),order=orders.find(function(o){return o.id===id;});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var updated=orders.map(function(o){return o.id===id?Object.assign({},o,{status:s}):o;});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>so(updated);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(s==="delivered"&amp;&amp;order&amp;&amp;order.status!=="delivered"){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var d=gd(),dd=d[order.date]||{sales:{},expenses:[]};</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var ns=Object.assign({},dd.sales||{});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Object.entries(order.items).forEach(function(e){ns[e[0]]=(ns[e[0]]||0)+e[1];});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>d[order.date]=Object.assign({},dd,{sales:ns});sd(d);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(s!=="delivered"&amp;&amp;order&amp;&amp;order.status==="delivered"){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var d=gd(),dd=d[order.date]||{sales:{},expenses:[]};</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var ns=Object.assign({},dd.sales||{});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Object.entries(order.items).forEach(function(e){ns[e[0]]=Math.max(0,(ns[e[0]]||0)-e[1]);});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>d[order.date]=Object.assign({},dd,{sales:ns});sd(d);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>showToast("Status → "+ST[s].label);renderOrders();updateHeader();</p>
+<p class="p1">}</p>
+<p class="p1">function delOrd(id){so(go().filter(function(o){return o.id!==id;}));showToast("Order deleted");expandId=null;renderOrders();updateHeader();}</p>
+<p class="p2"><br></p>
+<p class="p1">function renderPrep(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var h='&lt;div class="card" style="margin-bottom:14px"&gt;&lt;div class="ctitle"&gt;📅 Select Prep Date&lt;/div&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>'&lt;input class="sinp" style="margin-bottom:0" type="date" value="'+prepDate+'" onchange="prepDate=this.value;renderOrders()"/&gt;&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>h+='&lt;div class="slbl"&gt;Quantities to Prepare — '+fdate(prepDate)+'&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var orders=go().filter(function(o){return o.date===prepDate&amp;&amp;o.status!=="delivered";});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var tots={};orders.forEach(function(o){Object.keys(o.items).forEach(function(it){tots[it]=(tots[it]||0)+o.items[it];});});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var items=gi();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(!Object.keys(tots).length)return h+'&lt;div class="empty"&gt;&lt;div class="eico"&gt;😌&lt;/div&gt;&lt;div class="etit"&gt;No orders for this date&lt;/div&gt;&lt;div class="esub"&gt;Nothing to prepare!&lt;/div&gt;&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>Object.keys(tots).forEach(function(it){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var c=items[it]||{bg:"#8B6B4A",light:"#F5EDE6",emoji:"🍽️"},q=tots[it];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h+='&lt;div class="prepcard" style="border-left:5px solid '+c.bg+'"&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;div class="prepico" style="background:'+c.light+'"&gt;'+c.emoji+'&lt;/div&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;div&gt;&lt;div class="prepn"&gt;'+it+'&lt;/div&gt;&lt;div class="preps"&gt;from '+orders.length+' order'+(orders.length!==1?"s":"")+'&lt;/div&gt;&lt;/div&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;div class="prepct" style="background:'+c.bg+'"&gt;&lt;div class="prepnum"&gt;'+q+'&lt;/div&gt;&lt;div class="prepunit"&gt;units&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>h+='&lt;div class="card"&gt;&lt;div class="ctitle"&gt;👥 Orders ('+orders.length+')&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>orders.forEach(function(o){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var st=ST[o.status];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h+='&lt;div class="cust-row"&gt;&lt;div style="display:flex;align-items:center;gap:8px"&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;div class="cavt"&gt;'+o.customerName.charAt(0).toUpperCase()+'&lt;/div&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;div&gt;&lt;div style="font-weight:700;font-size:14px;color:#222"&gt;'+o.customerName+'&lt;/div&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;div style="font-size:11px;color:#bbb"&gt;'+Object.keys(o.items).map(function(i){return o.items[i]+"× "+i;}).join(", ")+'&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;span class="sbadge" style="background:'+st.bg+';color:'+st.color+'"&gt;'+st.icon+' '+st.label+'&lt;/span&gt;&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>h+='&lt;/div&gt;';return h;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function renderNewOrd(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var items=gi(),ik=Object.keys(items);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var h='&lt;div class="card"&gt;&lt;div class="ctitle"&gt;'+(editId?'✏️ Edit Order':'👤 New Order')+'&lt;/div&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>'&lt;input class="sinp" id="noName" placeholder="Customer name *" value="'+newOrd.cname+'" oninput="newOrd.cname=this.value"/&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>'&lt;div style="font-size:12px;font-weight:700;color:#aaa;margin-bottom:6px;text-transform:uppercase"&gt;Delivery / Pickup Date&lt;/div&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>'&lt;input class="sinp" type="date" id="noDate" value="'+newOrd.date+'" onchange="newOrd.date=this.value;renderOrders()"/&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>(isAdv(newOrd.date)?'&lt;div class="advnotice"&gt;⏰ Advance order for '+fdate(newOrd.date)+'&lt;/div&gt;':'')+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>'&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>h+='&lt;div class="card"&gt;&lt;div class="ctitle"&gt;🛒 Select Items&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(!ik.length){h+='&lt;div style="color:#ccc;font-size:13px"&gt;No items. Add via ⚙️ Manage.&lt;/div&gt;';}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>else{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>ik.forEach(function(item){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>var it=items[item],q=newOrd.items[item]||0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>h+='&lt;div class="noitem"&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>'&lt;div style="display:flex;align-items:center;gap:10px"&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>'&lt;div style="width:36px;height:36px;border-radius:11px;background:'+it.light+';display:flex;align-items:center;justify-content:center;font-size:18px"&gt;'+it.emoji+'&lt;/div&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>'&lt;div&gt;&lt;div style="font-weight:700;font-size:14px;color:#222"&gt;'+item+'&lt;/div&gt;&lt;div style="font-size:11px;color:#bbb"&gt;AED '+Number(it.price).toFixed(2)+'&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>'&lt;div style="display:flex;align-items:center;gap:6px"&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>'&lt;button style="width:30px;height:30px;border-radius:9px;border:none;background:#f5f5f5;font-size:16px;font-weight:700;color:#666;cursor:pointer" onclick="setNOItem(\''+item+'\','+(q-1)+')"&gt;−&lt;/button&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>'&lt;span style="width:32px;text-align:center;font-weight:900;font-size:16px;color:'+(q&gt;0?it.bg:"#ccc")+'"&gt;'+q+'&lt;/span&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>'&lt;button style="width:30px;height:30px;border-radius:9px;border:none;background:'+it.bg+';font-size:16px;font-weight:700;color:#fff;cursor:pointer" onclick="setNOItem(\''+item+'\','+(q+1)+')"&gt;+&lt;/button&gt;'+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>'&lt;/div&gt;&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var tot=Object.keys(newOrd.items).reduce(function(s,i){return s+newOrd.items[i]*(items[i]&amp;&amp;items[i].price||0);},0);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(Object.keys(newOrd.items).length)h+='&lt;div style="margin-top:12px;padding:10px 0;border-top:2px solid #f5f5f5;display:flex;justify-content:space-between"&gt;&lt;span style="font-weight:700;color:#555;font-size:14px"&gt;Order Total&lt;/span&gt;&lt;span style="font-weight:900;color:#C1522A;font-size:16px"&gt;'+cur(tot)+'&lt;/span&gt;&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>h+='&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>h+='&lt;div class="card"&gt;&lt;div class="ctitle"&gt;📝 Note (optional)&lt;/div&gt;&lt;textarea class="stxt" id="noNote" placeholder="Any special instructions..."&gt;'+newOrd.note+'&lt;/textarea&gt;&lt;/div&gt;';</p>
+<p class="p2"><br></p>
+<p class="p1">h+=’&lt;div class="nobtns"&gt;&lt;button class="cancelbtn" onclick="cancelNO()"&gt;Cancel&lt;/button&gt;&lt;button class="savebtn" onclick="saveNO()"&gt;’+(editId?‘✓ Update Order’:‘✓ Save Order’)+’&lt;/button&gt;&lt;/div&gt;’;</p>
+<p class="p1">return h;</p>
+<p class="p1">}</p>
+<p class="p1">function setNOItem(item,qty){</p>
+<p class="p1">qty=Math.max(0,parseInt(qty)||0);</p>
+<p class="p1">if(qty===0)delete newOrd.items[item];else newOrd.items[item]=qty;</p>
+<p class="p1">renderOrders();</p>
+<p class="p1">}</p>
+<p class="p1">function saveNO(){</p>
+<p class="p1">var name=(document.getElementById(“noName”)||{}).value||newOrd.cname||””;</p>
+<p class="p1">name=name.trim();</p>
+<p class="p1">if(!name)return showToast(“Enter customer name”,true);</p>
+<p class="p1">if(!Object.keys(newOrd.items).length)return showToast(“Add at least one item”,true);</p>
+<p class="p1">var note=(document.getElementById(“noNote”)||{}).value||newOrd.note||””;</p>
+<p class="p1">var items=gi();</p>
+<p class="p1">if(editId){</p>
+<p class="p1">// Update existing order — keep original prices for existing items, snapshot new ones</p>
+<p class="p1">var orders=go();</p>
+<p class="p1">var orig=orders.find(function(x){return x.id===editId;})||{};</p>
+<p class="p1">var prices=Object.assign({},orig.prices||{});</p>
+<p class="p1">Object.keys(newOrd.items).forEach(function(it){</p>
+<p class="p1">if(!prices[it])prices[it]=items[it]?items[it].price:0;</p>
+<p class="p1">});</p>
+<p class="p1">var updated=orders.map(function(o){</p>
+<p class="p1">return o.id===editId?Object.assign({},o,{customerName:name,date:newOrd.date,items:Object.assign({},newOrd.items),prices:prices,note:note}):o;</p>
+<p class="p1">});</p>
+<p class="p1">so(updated);</p>
+<p class="p1">editId=null;newOrd={cname:””,date:tday(),items:{},note:””};</p>
+<p class="p1">curOV=“list”;showToast(“Order updated ✓”);renderOrders();updateHeader();</p>
+<p class="p1">} else {</p>
+<p class="p1">// New order — snapshot current prices</p>
+<p class="p1">var prices={};</p>
+<p class="p1">Object.keys(newOrd.items).forEach(function(it){prices[it]=items[it]?items[it].price:0;});</p>
+<p class="p1">var o={id:Date.now(),customerName:name,date:newOrd.date,items:Object.assign({},newOrd.items),prices:prices,note:note,status:“pending”};</p>
+<p class="p1">var orders=go();orders.unshift(o);so(orders);</p>
+<p class="p1">newOrd={cname:””,date:tday(),items:{},note:””};</p>
+<p class="p1">curOV=“list”;showToast(“Order for “+o.customerName+” saved ✓”);renderOrders();updateHeader();</p>
+<p class="p1">}</p>
+<p class="p1">}</p>
+<p class="p1">function cancelNO(){newOrd={cname:””,date:tday(),items:{},note:””};curOV=“list”;editId=null;renderOrders();}</p>
+<p class="p1">function startEdit(id){</p>
+<p class="p1">var o=go().find(function(x){return x.id===id;});</p>
+<p class="p1">if(!o)return;</p>
+<p class="p1">editId=id;</p>
+<p class="p1">newOrd={cname:o.customerName,date:o.date,items:Object.assign({},o.items),note:o.note||””};</p>
+<p class="p1">curOV=“new”;expandId=null;renderOrders();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ── EXPENSES ──</p>
+<p class="p1">function renderExpenses(){</p>
+<p class="p1">var el=document.getElementById(“v-Expenses”),day=gday(selDate);</p>
+<p class="p1">var h=’&lt;div class="slbl"&gt;Capital Expenses — ‘+fdate(selDate)+’&lt;/div&gt;’;</p>
+<p class="p1">h+=’&lt;div class="card"&gt;&lt;div class="ctitle"&gt;➕ Add Expense&lt;/div&gt;’+</p>
+<p class="p1">‘&lt;input class="sinp" id="expLbl" placeholder="Label (e.g. Oil, Flour...)"/&gt;’+</p>
+<p class="p1">‘&lt;div class="exprow"&gt;&lt;div class="expaed"&gt;&lt;span class="expaedl"&gt;AED&lt;/span&gt;&lt;input class="expaedinp" id="expAmt" type="number" placeholder="Amount"/&gt;&lt;/div&gt;’+</p>
+<p class="p1">‘&lt;button class="addexpbtn" onclick="addExp()"&gt;Add&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;’;</p>
+<p class="p1">var exps=day.expenses||[];</p>
+<p class="p1">if(!exps.length){h+=’&lt;div style="text-align:center;color:#ccc;font-size:14px;font-weight:700;margin-top:36px"&gt;No expenses for this day&lt;/div&gt;’;}</p>
+<p class="p1">else{</p>
+<p class="p1">exps.forEach(function(e){</p>
+<p class="p1">h+=’&lt;div class="card expitem"&gt;&lt;div&gt;&lt;div class="expn"&gt;’+e.label+’&lt;/div&gt;&lt;div class="expa"&gt;’+cur(e.amount)+’&lt;/div&gt;&lt;/div&gt;’+</p>
+<p class="p1">‘&lt;button class="expd" onclick="delExp('+e.id+')"&gt;<span class="s1">✕</span>&lt;/button&gt;&lt;/div&gt;’;</p>
+<p class="p1">});</p>
+<p class="p1">var tot=exps.reduce(function(s,e){return s+e.amount;},0);</p>
+<p class="p1">h+=’&lt;div class="exptot"&gt;&lt;span style="font-weight:700;color:#555"&gt;Total Expenses&lt;/span&gt;&lt;span style="font-weight:900;color:#C1522A;font-size:16px"&gt;’+cur(tot)+’&lt;/span&gt;&lt;/div&gt;’;</p>
+<p class="p1">}</p>
+<p class="p1">el.innerHTML=h;</p>
+<p class="p1">}</p>
+<p class="p1">function addExp(){</p>
+<p class="p1">var lbl=(document.getElementById(“expLbl”)||{}).value||””;</p>
+<p class="p1">var amt=parseFloat((document.getElementById(“expAmt”)||{}).value||””);</p>
+<p class="p1">if(!lbl||!amt)return showToast(“Fill label &amp; amount”,true);</p>
+<p class="p1">var d=gd();if(!d[selDate])d[selDate]={sales:{},expenses:[]};</p>
+<p class="p1">(d[selDate].expenses=d[selDate].expenses||[]).push({id:Date.now(),label:lbl,amount:amt});</p>
+<p class="p1">sd(d);showToast(“Expense added ✓”);render();</p>
+<p class="p1">}</p>
+<p class="p1">function delExp(id){</p>
+<p class="p1">var d=gd();</p>
+<p class="p1">if(d[selDate])d[selDate].expenses=(d[selDate].expenses||[]).filter(function(e){return e.id!==id;});</p>
+<p class="p1">sd(d);render();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ── REPORT ──</p>
+<p class="p1">function renderReport(){</p>
+<p class="p1">var el=document.getElementById(“v-Report”),items=gi(),ik=Object.keys(items),data=gd();</p>
+<p class="p1">var h=’&lt;div class="rtabs"&gt;’+</p>
+<p class="p1">‘&lt;button class=“rtab’+(rtype===“week”?” on”:””)+’” onclick=“rtype='week';renderReport()”&gt;This Week&lt;/button&gt;’+</p>
+<p class="p1">‘&lt;button class=“rtab’+(rtype===“month”?” on”:””)+’” onclick=“rtype='month';renderReport()”&gt;This Month&lt;/button&gt;’+</p>
+<p class="p1">‘&lt;/div&gt;’;</p>
+<p class="p1">var dates=Object.keys(data).filter(function(d){return rtype===“week”?wkey(d)===wkey(tday()):mkey(d)===mkey(tday());});</p>
+<p class="p1">var rev=0,exp=0,is={};ik.forEach(function(i){is[i]={qty:0,revenue:0};});</p>
+<p class="p1">dates.forEach(function(d){</p>
+<p class="p1">var day=data[d]||{};</p>
+<p class="p1">ik.forEach(function(it){var q=day.sales&amp;&amp;day.sales[it]||0,r=q*(items[it].price||0);if(is[it]){is[it].qty+=q;is[it].revenue+=r;}rev+=r;});</p>
+<p class="p1">(day.expenses||[]).forEach(function(e){exp+=e.amount;});</p>
+<p class="p1">});</p>
+<p class="p1">var profit=rev-exp,margin=rev?((profit/rev)*100).toFixed(1)+”%”:“0%”;</p>
+<p class="p1">h+=’&lt;div class="slbl"&gt;’+(rtype===“week”?“Weekly”:“Monthly”)+’ Summary · ‘+dates.length+’ day’+(dates.length!==1?“s”:””)+’&lt;/div&gt;’;</p>
+<p class="p1">h+=’&lt;div class="sgrid"&gt;’+</p>
+<p class="p1">[[“Revenue”,cur(rev),”#C1522A”,“💰”],[“Expenses”,cur(exp),”#2C5A6A”,“📦”],[“Profit”,cur(profit),profit&gt;=0?”#5C6B3A”:”#C1522A”,“📈”],[“Margin”,margin,”#C8902A”,“📊”]].map(function(x){</p>
+<p class="p1">return’&lt;div class="scard" style="border-top:3px solid '+x[2]+'"&gt;&lt;div class="scico"&gt;’+x[3]+’&lt;/div&gt;&lt;div class="scval" style="color:'+x[2]+'"&gt;’+x[1]+’&lt;/div&gt;&lt;div class="sclbl"&gt;’+x[0]+’&lt;/div&gt;&lt;/div&gt;’;</p>
+<p class="p1">}).join(””)+’&lt;/div&gt;’;</p>
+<p class="p1">h+=’&lt;div class="card"&gt;&lt;div style="font-weight:800;font-size:15px;color:#222;margin-bottom:14px"&gt;📋 Item Breakdown&lt;/div&gt;’;</p>
+<p class="p1">if(!ik.length)h+=’&lt;div style="color:#ccc;font-size:14px"&gt;No items yet&lt;/div&gt;’;</p>
+<p class="p1">ik.forEach(function(item){</p>
+<p class="p1">var s=is[item]||{qty:0,revenue:0},p=rev?(s.revenue/rev)*100:0,c=items[item];</p>
+<p class="p1">h+=’&lt;div class="bitem"&gt;&lt;div class="brow"&gt;’+</p>
+<p class="p1">‘&lt;div style="display:flex;align-items:center;gap:8px"&gt;&lt;span style="font-size:18px"&gt;’+c.emoji+’&lt;/span&gt;’+</p>
+<p class="p1">‘&lt;div&gt;&lt;div style="font-weight:700;font-size:14px;color:#222"&gt;’+item+’&lt;/div&gt;&lt;div style="font-size:11px;color:#bbb;font-weight:600"&gt;’+s.qty+’ units&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;’+</p>
+<p class="p1">‘&lt;div style="text-align:right"&gt;&lt;div style="font-weight:800;font-size:14px;color:'+c.bg+'"&gt;’+cur(s.revenue)+’&lt;/div&gt;&lt;div style="font-size:11px;color:#ccc;font-weight:600"&gt;’+p.toFixed(1)+’%&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;’+</p>
+<p class="p1">‘&lt;div class="ptrack"&gt;&lt;div class="pbar" style="width:'+p+'%;background:'+c.bg+'"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;’;</p>
+<p class="p1">});</p>
+<p class="p1">h+=’&lt;/div&gt;’;</p>
+<p class="p1">if(!dates.length)h+=’&lt;div style="text-align:center;color:#ccc;font-size:14px;font-weight:700;padding:20px 0"&gt;No data for this period yet&lt;/div&gt;’;</p>
+<p class="p1">el.innerHTML=h;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ── INIT ──</p>
+<p class="p1">document.getElementById(“selDate”).value=selDate;</p>
+<p class="p1">document.getElementById(“selDate”).max=tday();</p>
+<p class="p1">renderColorStrip();renderEPicker();</p>
+<p class="p1">render();</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
